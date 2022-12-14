@@ -19,14 +19,32 @@ h3 {
     margin: 0 0 5rem 0;
 }
 h1 {
-    font-size: 5rem;
-}
-h2 {
     font-size: 4rem;
 }
-h3 {
-    font-size: 3rem;
+
+@media (min-width:768px) { 
+    h1{
+        font-size:5rem
+    }
 }
+h2 {
+    font-size: 3.2rem;
+}
+@media (min-width:768px) { 
+    h2{
+        font-size: 4rem;
+    }
+}
+h3 {
+    font-size: 2.4rem;
+}
+@media (min-width:768px) { 
+    h3{
+        font-size: 3rem;
+        
+    }
+}
+
 a {
     text-decoration: none;
     color: #000;
@@ -79,7 +97,14 @@ img {
 .nav-principal {
     padding: 2rem 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;    
+}
+@media (min-width:768px) { 
+    .nav-principal{
+        flex-direction: row;
+        justify-content: space-between; 
+    }
 }
 
 .hero {
@@ -87,12 +112,32 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 55rem;
+    height: 25rem;
+}
+
+@media (min-width:768px) { 
+    .hero {
+        height: 55rem;
+
+    }
 }
 
 /** Categorias **/
 .categorias {
     padding-top: 5rem;
+}
+
+.categoria{
+    margin-bottom: 2rem;
+}
+@media (min-width:768px) { 
+    .categoria{
+        margin-bottom: 0;
+    }
+}
+
+.categoria img{
+    max-width: 100%;
 }
 .categoria a {
     text-align: center;
@@ -105,10 +150,14 @@ img {
     color: #FFFFFF;
     border-bottom-right-radius: 1rem;
 }
-.listado-categorias {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+
+@media (min-width:768px) { 
+    .listado-categorias {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
 }
 
 /** Bloque Nosotros */
